@@ -37,10 +37,10 @@ function App() {
             
             <Route 
               path="/admin_calendar"
-              element={user ? <AdminEventsCalendar /> : <Navigate to="/" />}/>
+              element={<AdminEventsCalendar /> }/>
             
             <Route path="/blog-admin" 
-            element={user ? <AdminBlogList /> : <Navigate to="/blog-admin" />}/>
+            element={ <AdminBlogList />}/>
             <Route path="/blog" element={<BlogList />} />
             <Route path="/create-post" element={<CreateBlogPost />} />
             <Route path="/edit-post/:id" element={<EditPostAdmin />} />

@@ -17,7 +17,8 @@ export default function Navbar() {
     const handleLogout = () => {
         if(user != null)
         {
-        logout()
+        logout();
+        navigate("/");
         }
       };
 
