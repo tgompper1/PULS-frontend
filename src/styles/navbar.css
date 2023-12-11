@@ -34,36 +34,12 @@
 }
 
 .nav-links{
-    color: #000;
+    color:#197278;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
-}
-
-.nav-links:hover{
-    color: #197278;
-}
-
-.my-nav-item{
-    /* height: 80px; */
-    border-bottom: 2px solid transparent;
-}
-
-.my-nav-item:hover{
-    border-bottom: 2px solid #197278;
-}
-
-.logout-button
-{
-  border-bottom: 2px solid transparent;
-  border-radius: 10%;
-  height: 100%;
-  background-color: #197278;
-  color: white;
-  width: 100%;
-
 }
 
 .menu-icon{
@@ -73,6 +49,32 @@
 .fa-bars{
     color: #000;
 }
+
+.hover{
+  border-bottom: 2px solid transparent;
+}
+
+.hover:hover {
+  border-bottom: solid 2px #197278;
+  transition: all 0.3s ease;
+}
+
+.logout-button{
+  color: red;
+}
+.logout-button:hover {
+  border-bottom: solid 2px red;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  border: none;
+}
+
+.nav-item {
+  width: 100%;
+}
+
 
 @media screen and (max-width: 960px) {
     .NavbarItems {
@@ -104,17 +106,27 @@
       padding: 2rem;
       width: 100%;
       display: table;
+    }
+
+    .hover{
       color: #197278;
     }
   
-    .nav-links:hover {
+    .hover:hover {
       color: #fff;
       background-color:#197278 ;
       transform: scale(1.2);
       transition: all 0.3s ease;
     }
 
-    
+    .logout-button{
+      color: red;
+    }
+    .logout-button:hover {
+      transform: scale(1.2);
+      border-bottom: none;
+      transition: all 0.3s ease;
+    }
   
     .nav-item:hover {
       border: none;

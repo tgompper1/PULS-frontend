@@ -47,18 +47,20 @@ export default function Navbar() {
         {
             return [
             <ul className = {click ? 'nav-menu active' : 'nav-menu'}>
-            <li className="nav-item my-nav-item">
-                    <NavLink className="nav-link nav-links" to="/blog-admin" onClick={closeMobileMenu} style={{ visibility: user ? 'visible' : 'hidden'}}>
+            <li className="nav-item">
+                    <NavLink className="nav-links hover" to="/blog-admin" onClick={closeMobileMenu} style={{ visibility: user ? 'visible' : 'hidden'}}>
                         BLOG
                     </NavLink>
                 </li>
-                <li className="nav-item my-nav-item">
-                    <NavLink className="nav-link nav-links" to="/admin_calendar" onClick={closeMobileMenu} style={{ visibility: user ? 'visible' : 'hidden' }}>
+                <li className="nav-item">
+                    <NavLink className="nav-links hover" to="/admin_calendar" onClick={closeMobileMenu} style={{ visibility: user ? 'visible' : 'hidden' }}>
                         CALENDAR
                     </NavLink>
                 </li>
-                <li  style={{ visibility: user ? 'visible' : 'hidden' }}>
-                <button className='puls-button' onClick={handleLogout} style={{ visibility: user ? 'visible' : 'hidden', minHeight: '20px',  height: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>LOGOUT</button>
+                <li  className="nav-item" style={{ visibility: user ? 'visible' : 'hidden' }}>
+                    <NavLink className='logout-button nav-links' onClick={handleLogout} styles={{visibility: user ? 'visible' : 'hidden'}}>
+                        LOGOUT
+                    </NavLink>
                 </li>
               
             </ul>];
@@ -67,14 +69,14 @@ export default function Navbar() {
             <ul className = {click ? 'nav-menu active' : 'nav-menu'}>
                 
                 
-                <li className="nav-item my-nav-item">
-                    <NavLink className="nav-link nav-links" to="/blog" onClick={closeMobileMenu}>
+                <li className="nav-item">
+                    <NavLink className="nav-links hover" to="/blog" onClick={closeMobileMenu}>
                         BLOG
                     </NavLink>
                 </li>
                 
-                <li className="nav-item my-nav-item">
-                    <NavLink className="nav-link nav-links" to="/calendar" onClick={closeMobileMenu}>
+                <li className="nav-item hover">
+                    <NavLink className="nav-links" to="/calendar" onClick={closeMobileMenu}>
                         CALENDAR
                     </NavLink>
                 </li>

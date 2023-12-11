@@ -48,7 +48,6 @@ function App() {
             
             <Route path="/:path" component={App} />
             
-            <Redirect to={window.location.pathname} />
 
         </Routes>
       </div>
