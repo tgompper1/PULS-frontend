@@ -76,8 +76,8 @@ export default function Navbar() {
                     </NavLink>
                 </li>
                 
-                <li className="nav-item hover">
-                    <NavLink className="nav-links" to="/calendar" onClick={closeMobileMenu}>
+                <li className="nav-item">
+                    <NavLink className="nav-links hover" to="/calendar" onClick={closeMobileMenu}>
                         CALENDAR
                     </NavLink>
                 </li>
