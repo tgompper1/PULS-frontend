@@ -60,8 +60,8 @@ export default function Navbar() {
                         CALENDAR
                     </NavLink>
                 </li>
-                <li  style={{ visibility: user ? 'visible' : 'hidden' }}>
-                <button className='puls-button' onClick={handleLogout} style={{ visibility: user ? 'visible' : 'hidden', minHeight: '20px',  height: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>LOGOUT</button>
+                <li className="nav-item my-nav-item nav-link nav-links" style={{ visibility: user ? 'visible' : 'hidden' }}>
+                <button className='puls-button active nav-link nav-links' onClick={handleLogout} style={{ visibility: user ? 'visible' : 'hidden', minHeight: '20px',  height: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>LOGOUT</button>
                 </li>
               
             </ul>];
