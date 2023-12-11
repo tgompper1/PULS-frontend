@@ -1,6 +1,7 @@
 import React from "react";
 // We use Route in order to define the different routes of our application
-import { Route, Routes, Navigate, Redirect } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
+
  // We import all the components we need in our app
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -48,7 +49,7 @@ function App() {
             
             <Route path="/:path" component={App} />
             
-            <Redirect to={window.location.pathname} />
+            <Navigate to={window.location.pathname} />
 
         </Routes>
       </div>
