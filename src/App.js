@@ -47,8 +47,6 @@ function App() {
             <Route path="/post/:id" element={<PostDetails />} />
 
             
-            <Route path="/:path" component={App} />
-            
             
 
         </Routes>
