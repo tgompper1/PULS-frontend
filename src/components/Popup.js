@@ -40,7 +40,7 @@ export default function Popup(props) {
 
       
       const { data } = await axios.post(
-        "https://pulse.adaptable.app/login",//"http://localhost:8001/login",
+        "/api/login",//"http://localhost:8001/login",
         {
           ...inputValue,
         },
