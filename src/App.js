@@ -46,9 +46,6 @@ function App() {
             <Route path="/edit-post/:id" element={<EditPostAdmin />} />
             <Route path="/post/:id" element={<PostDetails />} />
 
-            
-            
-
         </Routes>
       </div>
      <Footer />
