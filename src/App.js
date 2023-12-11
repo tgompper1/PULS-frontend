@@ -49,7 +49,7 @@ function App() {
             
             <Route path="/:path" component={App} />
             
-            <Navigate to={window.location.pathname} />
+            
 
         </Routes>
       </div>
