@@ -10,10 +10,12 @@ import { useLogout } from "../hooks/useLogout";
 
 import { NavLink } from "react-router-dom";
 import { useAuthContext } from '../hooks/useAuthContext'; 
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
     const { user } = useAuthContext();
     const { logout } = useLogout();
+    const navigate = useNavigate();
     const handleLogout = () => {
         if(user != null)
         {
