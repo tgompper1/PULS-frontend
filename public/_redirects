@@ -1,2 +1,2 @@
 # Redirects from what the browser requests to what we serve
-/* / 200
+/blog /blog 200
