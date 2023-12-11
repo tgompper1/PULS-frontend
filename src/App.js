@@ -40,7 +40,7 @@ function App() {
               element={user ? <AdminEventsCalendar /> : <Navigate to="/" />}/>
             
             <Route path="/blog-admin" 
-            element={user ? <AdminBlogList /> : <Navigate to="/" />}/>
+            element={user ? <AdminBlogList /> : <Navigate to="/blog-admin" />}/>
             <Route path="/blog" element={<BlogList />} />
             <Route path="/create-post" element={<CreateBlogPost />} />
             <Route path="/edit-post/:id" element={<EditPostAdmin />} />
