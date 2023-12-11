@@ -36,7 +36,7 @@ const CreateBlogPost = (props) => {
     formData.append('photo', post.photo);
 
     axios
-      .post(URL+'api/posts', formData)
+      .post(URL + 'api/posts', formData)
       .then((res) => {
         setPost({
           title: '',
