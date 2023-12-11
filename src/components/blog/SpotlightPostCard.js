@@ -13,7 +13,7 @@ const SpotlightPostCard = (props) => {
         <img src={path} className="header-image"></img>
         <div className="spotlight-text">
           <h2 className>{post.title}</h2>
-          <p>{date.toDateString()}</p>
+          <p className="date">{date.toDateString()}</p>
           <p>{post.summary}</p>
         </div>
       </Link>

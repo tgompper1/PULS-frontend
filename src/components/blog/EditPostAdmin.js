@@ -71,12 +71,12 @@ function EditPostAdmin(props) {
   }
 
   const addRemoveSpotlight =
-    JSON.parse(localStorage.getItem("spotlightPostID")).length === 0
-    ? <Link to='/blog-admin' className="button" onClick={() => onStarClick()}>
-        Spotlight
-      </Link>
-    : <Link  to= '/blog-admin' onClick={deleteSpotlight} className="button">
+    JSON.parse(localStorage.getItem("spotlightPostID")) === String(id)
+    ? <Link  to= '/blog-admin' onClick={deleteSpotlight} className="button">
         Remove Spotlight
+      </Link>
+    :  <Link to='/blog-admin' className="button" onClick={() => onStarClick()}>
+        Spotlight
       </Link>
 
   // delete post
