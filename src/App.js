@@ -44,6 +44,12 @@ function App() {
             <Route path="/create-post" element={<CreateBlogPost />} />
             <Route path="/edit-post/:id" element={<EditPostAdmin />} />
             <Route path="/post/:id" element={<PostDetails />} />
+
+            
+            <Route path="/:path" component={App} />
+            
+            <Redirect to={window.location.pathname} />
+
         </Routes>
       </div>
      <Footer />
