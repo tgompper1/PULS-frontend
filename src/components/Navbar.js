@@ -10,14 +10,17 @@ import { useLogout } from "../hooks/useLogout";
 
 import { NavLink } from "react-router-dom";
 import { useAuthContext } from '../hooks/useAuthContext'; 
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
     const { user } = useAuthContext();
     const { logout } = useLogout();
+    const navigate = useNavigate();
     const handleLogout = () => {
         if(user != null)
         {
-        logout()
+        logout();
+        navigate("/");
         }
       };
 
@@ -57,10 +60,8 @@ export default function Navbar() {
                         CALENDAR
                     </NavLink>
                 </li>
-                <li  className="nav-item" style={{ visibility: user ? 'visible' : 'hidden' }}>
-                    <NavLink className='logout-button nav-links' onClick={handleLogout} styles={{visibility: user ? 'visible' : 'hidden'}}>
-                        LOGOUT
-                    </NavLink>
+                <li className="nav-item my-nav-item nav-link nav-links" style={{ visibility: user ? 'visible' : 'hidden' }}>
+                <button className='puls-button active nav-link nav-links' onClick={handleLogout} style={{ visibility: user ? 'visible' : 'hidden', minHeight: '20px',  height: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>LOGOUT</button>
                 </li>
               
             </ul>];

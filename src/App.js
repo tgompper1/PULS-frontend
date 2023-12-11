@@ -1,6 +1,7 @@
 import React from "react";
 // We use Route in order to define the different routes of our application
-import { Route, Routes, Navigate, Redirect } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
+
  // We import all the components we need in our app
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -36,18 +37,14 @@ function App() {
             
             <Route 
               path="/admin_calendar"
-              element={user ? <AdminEventsCalendar /> : <Navigate to="/" />}/>
+              element={<AdminEventsCalendar /> }/>
             
             <Route path="/blog-admin" 
-            element={user ? <AdminBlogList /> : <Navigate to="/" />}/>
+            element={ <AdminBlogList />}/>
             <Route path="/blog" element={<BlogList />} />
             <Route path="/create-post" element={<CreateBlogPost />} />
             <Route path="/edit-post/:id" element={<EditPostAdmin />} />
             <Route path="/post/:id" element={<PostDetails />} />
-
-            
-            <Route path="/:path" component={App} />
-            
 
         </Routes>
       </div>
