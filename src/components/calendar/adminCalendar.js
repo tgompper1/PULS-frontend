@@ -25,6 +25,8 @@ const localizer = dateFnsLocalizer({
     locales,
 });
 
+const URL = "https://pulse.adaptable.app/"
+
 
 export default function AdminEventsCalendar() {  
   const { user } = useAuthContext();
@@ -47,7 +49,7 @@ export default function AdminEventsCalendar() {
     e.preventDefault();
 
     axios
-      .post('http://localhost:8001/api/events', event)
+      .post(URL+'api/events', event)
       .then((res) => {
         setEvent({
           title: '',
@@ -66,7 +68,7 @@ export default function AdminEventsCalendar() {
     const r = window.confirm("Would you like to delete this event?")
     if(r === true){
       try{
-        const url = ("http://localhost:8001/api/events/" + id);
+        const url = (URL+"api/events/" + id);
         const res = await axios.delete(url);
         alert("Event deleted, please refresh page.")
     }
@@ -78,7 +80,7 @@ export default function AdminEventsCalendar() {
 
   useEffect(()=>{
     axios
-      .get('http://localhost:8001/api/events')
+      .get(URL+'api/events')
       .then((res) => {
         setEvents([...res.data]);
       })

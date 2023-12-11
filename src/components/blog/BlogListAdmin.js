@@ -19,10 +19,11 @@ function AdminBlogList(){
 
   const [posts, setPosts] = useState([]);
 
+  const URL= "https://pulse.adaptable.app/"
   // get posts
   useEffect(()=>{
     axios
-      .get('http://localhost:8001/api/posts')
+      .get(URL+'api/posts')
       .then((res) => {
         setPosts(res.data);
       })

@@ -15,6 +15,7 @@ const CreateBlogPost = (props) => {
     photo: ''
   });
 
+  const URL = "https://pulse.adaptable.app/"
   const onSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -24,7 +25,7 @@ const CreateBlogPost = (props) => {
     formData.append('photo', post.photo);
 
     axios
-      .post('http://localhost:8001/api/posts', formData)
+      .post(URL+'api/posts', formData)
       .then((res) => {
         setPost({
           title: '',

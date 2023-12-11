@@ -11,11 +11,11 @@ function EditPostAdmin(props) {
 
   const { id } = useParams();
   const navigate = useNavigate();
-
+  const URL = "https://pulse.adaptable.app/"
   // get the post by id
   useEffect( () => {
     axios
-      .get(`http://localhost:8001/api/posts/${id}`)
+      .get(URL+`api/posts/${id}`)
       .then((res) => {
         setTitle({title: res.data.title});
         setSummary({summary: res.data.summary});
@@ -37,7 +37,7 @@ function EditPostAdmin(props) {
     };
 
     axios
-      .put(`http://localhost:8001/api/posts/${id}`, data)
+      .put(URL+`api/posts/${id}`, data)
       .then((res) => {
         console.log('Updated post successfully');
       })
@@ -50,7 +50,7 @@ function EditPostAdmin(props) {
 
   // get spotlight post id
   useEffect(()=>{
-    axios.get('http://localhost:8001/api/settings/spotlight')
+    axios.get(URL+'api/settings/spotlight')
     .then((res) =>{
       localStorage.setItem("spotlightPostID", JSON.stringify(res.data.spotlightID));
     })
@@ -61,7 +61,7 @@ function EditPostAdmin(props) {
 
   const deleteSpotlight = () => {
     axios
-    .delete(`http://localhost:8001/api/settings/spotlight`)
+    .delete(URL+`api/settings/spotlight`)
     .then((res) => {
       console.log('successfuly removed old spotlight post');
     })
@@ -87,7 +87,7 @@ function EditPostAdmin(props) {
         deleteSpotlight();
       }
       axios
-      .delete(`http://localhost:8001/api/posts/${id}`)
+      .delete(URL+`api/posts/${id}`)
       .then((res) => {
         navigate('/blog-admin');
       })
@@ -104,7 +104,7 @@ function EditPostAdmin(props) {
 
     // add star post
     axios
-    .post(`http://localhost:8001/api/settings/spotlight/`, {id})
+    .post(URL+`api/settings/spotlight/`, {id})
     .then((res) => {
       console.log('Successfully added spotlight')
     })

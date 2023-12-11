@@ -21,13 +21,14 @@ const localizer = dateFnsLocalizer({
     locales,
 });
 
+const URL = "https://pulse.adaptable.app/"
 
 export default function EventsCalendar() {
     const [events, setEvents] = useState([]);
 
     useEffect(()=>{
         axios
-          .get('http://localhost:8001/api/events')
+          .get(URL+'api/events')
           .then((res) => {
             setEvents([...res.data]);
           })

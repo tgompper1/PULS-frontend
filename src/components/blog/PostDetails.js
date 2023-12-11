@@ -13,11 +13,11 @@ const PostDetails = (props) => {
   });
 
   const { id } = useParams()
-
+  const URL = "https://pulse.adaptable.app/"
   // get the post by id
   useEffect(() => {
     axios
-      .get(`http://localhost:8001/api/posts/${id}`)
+      .get(URL+`api/posts/${id}`)
       .then((res) => {
         setPost({
           title: res.data.title,
@@ -31,7 +31,7 @@ const PostDetails = (props) => {
       });
   }, [id]);
 
-  const path = "http://localhost:8001/images/" + post.photo;
+  const path = "https://pulse.adaptable.app/images/" + post.photo;
   const date = new Date(post.createdAt)
   return(
     <div>

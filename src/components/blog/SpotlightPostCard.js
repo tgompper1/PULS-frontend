@@ -5,7 +5,7 @@ import '../../styles/blog.css';
 const SpotlightPostCard = (props) => {
   const post = props.post;
   const date = new Date(post.createdAt); 
-  const path = "http://localhost:8001/images/" + post.photo
+  const path = "https://pulse.adaptable.app/images/" + post.photo
 
   return(
     <div className="post-container">

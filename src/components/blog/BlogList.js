@@ -10,9 +10,11 @@ function BlogList(){
   const [posts, setPosts] = useState([]);
   const [spotlightPost, setSpotlightPost] = useState([]);
 
+  const URL = "https://pulse.adaptable.app/"
+
   // get spotlight post id
   useEffect(()=>{
-    axios.get('http://localhost:8001/api/settings/spotlight')
+    axios.get(URL+'api/settings/spotlight')
     .then((res) =>{
       localStorage.setItem("spotlightPostID", JSON.stringify(res.data.spotlightID));
     })
@@ -25,7 +27,7 @@ function BlogList(){
   // get posts
   useEffect(()=>{
     axios
-      .get('http://localhost:8001/api/posts')
+      .get(URL+'api/posts')
       .then((res) => {
         setPosts(res.data.filter((post) => {
           return String(post._id) !== JSON.parse(localStorage.getItem("spotlightPostID"));
@@ -40,7 +42,7 @@ function BlogList(){
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("spotlightPostID")).length !== 0) {
       axios
-      .get(`http://localhost:8001/api/posts/${JSON.parse(localStorage.getItem("spotlightPostID"))}`)
+      .get(`https://pulse.adaptable.app/api/posts/${JSON.parse(localStorage.getItem("spotlightPostID"))}`)
         .then((res) => {
           setSpotlightPost({
             _id: JSON.parse(localStorage.getItem("spotlightPostID")),
