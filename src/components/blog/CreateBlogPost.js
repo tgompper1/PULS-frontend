@@ -14,8 +14,6 @@ const CreateBlogPost = (props) => {
   
   const navigate = useNavigate();
   const { user } = useAuthContext();
-  const history = useHistory();
-  history.push("/");
   //if the user writes an admin url this will check if they're logged in
   //if not they get redirected to the home page
   const [post, setPost] = useState({
@@ -24,6 +22,7 @@ const CreateBlogPost = (props) => {
     photo: '',
     summary: ''
   });
+  
 
   if(user === null)
   {
