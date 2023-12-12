@@ -24,7 +24,7 @@ const CreateBlogPost = (props) => {
   if(user === null)
   {
     //add comment
-    props.navigate("/blog");
+    navigate("/blog");
   }
   
 
