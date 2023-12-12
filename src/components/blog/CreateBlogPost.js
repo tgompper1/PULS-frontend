@@ -12,20 +12,37 @@ const CreateBlogPost = (props) => {
   const [post, setPost] = useState({
     title: '',
     body: '',
-    photo: ''
+    photo: '',
+    summary: ''
   });
 
   const URL = "https://pulse.adaptable.app/"
   const onSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
+    if(post.title === "")
+    {
+      alert("Must fill out Title field");
+    }else if(post.title.length >100)
+    {
+      alert("Title can be max 100 characters");
+    }else if(post.summary === "")
+    {
+      alert("Must fill out Summary field");
+    }else if(post.summary.length > 200)
+    {
+      alert("Summary can be max 200 characters");
+    }else if(post.photo === "")
+    {
+      alert("Image is required")
+    }else{
     formData.append('title', post.title);
     formData.append('summary', post.summary);
     formData.append('body', post.body);
     formData.append('photo', post.photo);
 
     axios
-      .post(URL+'api/posts', formData)
+      .post(URL + 'api/posts', formData)
       .then((res) => {
         setPost({
           title: '',
@@ -38,7 +55,7 @@ const CreateBlogPost = (props) => {
         console.log('Error in CreateBlogPost');
       });
 
-    navigate('/blog-admin');
+    navigate('/blog-admin');}
   };
 
   return (
