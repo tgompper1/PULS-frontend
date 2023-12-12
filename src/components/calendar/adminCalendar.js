@@ -51,6 +51,7 @@ export default function AdminEventsCalendar() {
   const handleAddEvent = (e) => {
     e.preventDefault();
 
+    // create an event and post to DB
     axios
       .post(URL+'api/events', event)
       .then((res) => {
@@ -71,6 +72,7 @@ export default function AdminEventsCalendar() {
     const r = window.confirm("Would you like to delete this event?")
     if(r === true){
       try{
+        // delete event and remove from DB
         const url = (URL+"api/events/" + id);
         const res = await axios.delete(url);
         alert("Event deleted, please refresh page.")
@@ -82,6 +84,7 @@ export default function AdminEventsCalendar() {
   }
 
   useEffect(()=>{
+    // get all events from DB to display
     axios
       .get(URL+'api/events')
       .then((res) => {

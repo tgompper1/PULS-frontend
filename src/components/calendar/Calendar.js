@@ -27,6 +27,7 @@ export default function EventsCalendar() {
     const [events, setEvents] = useState([]);
 
     useEffect(()=>{
+        // get all events froom DB to display
         axios
           .get(URL+'api/events')
           .then((res) => {
