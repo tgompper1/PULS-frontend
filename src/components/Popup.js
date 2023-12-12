@@ -78,10 +78,10 @@ export default function Popup(props) {
                 <div>
                     <h1>Admin Login</h1>
                     <form onSubmit={handleSubmit}>
-                        <label for="email">Username/Email: &ensp;</label>
+                        <label for="email">Email: &ensp;&ensp;&ensp;&ensp;</label>
                         <input type="email" id="email"  name="email" value={email} placeholder="Enter your email" onChange={handleOnChange}/><br></br>
                         <br></br>
-                        <label for="pass">Password:  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</label>
+                        <label for="pass">Password:  &ensp;</label>
                         <input type="password" id="pass" name="password" value={password} placeholder="Enter your password" onChange={handleOnChange}/><br></br>
                         <br></br><br></br>
                         <input type="submit" value="Submit" className='submit-btn'></input>
