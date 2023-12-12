@@ -25,9 +25,7 @@ const CreateBlogPost = (props) => {
   
 
   if(user === null)
-  {/*
-    navigate('/');
-    return null;*/
+  {
     return <Navigate to="/"/>;
   }
   

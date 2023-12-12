@@ -13,7 +13,7 @@ const PostCard = (props) => {
   if(user === null)
   {
     //add comment
-    props.navigate("/");
+    return <Navigate to="/"/>;
   }
 
 
