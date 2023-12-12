@@ -4,7 +4,7 @@ import axios from 'axios';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 
@@ -23,7 +23,7 @@ const CreateBlogPost = (props) => {
 
   if(user === null)
   {
-    navigate("/");
+    props.navigate("/")
   }
   
 
