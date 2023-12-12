@@ -16,7 +16,7 @@ function AdminBlogList(){
   {
     navigate("/");
     return (<div></div>);
-  }
+  }else{
 
   const [posts, setPosts] = useState([]);
 
@@ -50,7 +50,7 @@ function AdminBlogList(){
 
       {blogList}
     </div>
-  );
+  );}
 }
 
 export default AdminBlogList;

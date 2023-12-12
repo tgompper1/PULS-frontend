@@ -19,7 +19,7 @@ const CreateBlogPost = (props) => {
   {
     navigate("/");
     return (<div></div>);
-  }
+  }else{
   
 
 
@@ -145,7 +145,7 @@ const CreateBlogPost = (props) => {
         <input type='submit' onSubmit={onSubmit} className="button" value="Create Post"/>
       </form>
     </div>
-  );
+  );}
 };
 
 export default CreateBlogPost;
