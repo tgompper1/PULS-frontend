@@ -14,6 +14,7 @@ const CreateBlogPost = (props) => {
   const { user } = useAuthContext();
   //if the user writes an admin url this will check if they're logged in
   //if not they get redirected to the home page
+  
   if(user === null)
   {
     navigate("/");
