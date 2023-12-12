@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import PostCardAdmin from './PostCardAdmin';
 import '../twelve_column_grid.css'
 import '../../styles/blog.css';

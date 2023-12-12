@@ -10,7 +10,7 @@ import '../../styles/calendar.css';
 import "../twelve_column_grid.css";
 import AutoplayCarousel from "../imageCarousel/autoplayCarousel";
 import { useAuthContext } from "../../hooks/useAuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
 
