@@ -15,8 +15,6 @@ function AdminBlogList(){
     navigate("/");
   }
 
-
-
   const [posts, setPosts] = useState([]);
 
   const URL= "https://pulse.adaptable.app/"

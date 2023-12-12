@@ -108,8 +108,8 @@ textarea{
   }
 
   .blog-image{
-    height: 60vh;
-    width: 60vh;
+    height: 60vw;
+    width: 60vw;
     object-fit: cover;
   }
 

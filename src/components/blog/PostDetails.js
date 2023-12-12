@@ -14,6 +14,7 @@ const PostDetails = (props) => {
 
   const { id } = useParams()
   const URL = "https://pulse.adaptable.app/"
+  
   // get the post by id
   useEffect(() => {
     axios
