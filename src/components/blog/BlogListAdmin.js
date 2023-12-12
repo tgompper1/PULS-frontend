@@ -11,12 +11,8 @@ function AdminBlogList(){
   const { user } = useAuthContext();
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
-  //if the user writes an admin url this will check if they're logged in
-  //if not they get redirected to the home page
-  if(user === null)
-  {
-    return <Navigate to="/"/>;
-  }
+  
+  
 
   
 
@@ -39,6 +35,12 @@ function AdminBlogList(){
       ? ''
       : posts.map((post, k) => <PostCardAdmin post={post} key={k} />);
 
+//if the user writes an admin url this will check if they're logged in
+  //if not they get redirected to the home page
+      if(user === null)
+      {
+        return <Navigate to="/"/>;
+      }
 
   return (
     <div>

@@ -32,12 +32,7 @@ export default function AdminEventsCalendar() {
   const { user } = useAuthContext();
   const navigate = useNavigate();
 
-  //if the user writes an admin url this will check if they're logged in
-  //if not they get redirected to the home page
-  if(user == null)
-  {
-    return <Navigate to="/"/>;
-  }
+  
 
 
 
@@ -94,6 +89,13 @@ export default function AdminEventsCalendar() {
         console.log('Error from ShowEventList');
       });
   }, []);
+
+  //if the user writes an admin url this will check if they're logged in
+  //if not they get redirected to the home page
+  if(user == null)
+  {
+    return <Navigate to="/"/>;
+  }
 
 
   return (

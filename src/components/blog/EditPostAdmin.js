@@ -9,12 +9,7 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 function EditPostAdmin(props) {
   const { user } = useAuthContext();
   const navigate = useNavigate();
-  //if the user writes an admin url this will check if they're logged in
-  //if not they get redirected to the home page
-  if(user === null)
-  {
-    return <Navigate to="/"/>;
-  }
+  
 
 
 
@@ -129,6 +124,13 @@ function EditPostAdmin(props) {
       console.log('Error form EditPostAdmin_starClick');
     })
   };
+
+  //if the user writes an admin url this will check if they're logged in
+  //if not they get redirected to the home page
+  if(user === null)
+  {
+    return <Navigate to="/"/>;
+  }
 
   return (
     <div>
