@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 function AdminBlogList(){
   const { user } = useAuthContext();
   const navigate = useNavigate();
+  const [posts, setPosts] = useState([]);
   //if the user writes an admin url this will check if they're logged in
   //if not they get redirected to the home page
   if(user === null)
@@ -17,7 +18,7 @@ function AdminBlogList(){
     navigate("/");
   }else{
 
-  const [posts, setPosts] = useState([]);
+  
 
   const URL= "https://pulse.adaptable.app/"
   // get posts

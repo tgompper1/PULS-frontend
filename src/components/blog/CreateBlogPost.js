@@ -14,6 +14,12 @@ const CreateBlogPost = (props) => {
   const { user } = useAuthContext();
   //if the user writes an admin url this will check if they're logged in
   //if not they get redirected to the home page
+  const [post, setPost] = useState({
+    title: '',
+    body: '',
+    photo: '',
+    summary: ''
+  });
 
   if(user === null)
   {
@@ -25,12 +31,7 @@ const CreateBlogPost = (props) => {
 
   // Define the state with useState hook
   
-  const [post, setPost] = useState({
-    title: '',
-    body: '',
-    photo: '',
-    summary: ''
-  });
+  
 
   const URL = "https://pulse.adaptable.app/"
   const onSubmit = (e) => {
