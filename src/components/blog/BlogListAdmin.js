@@ -15,7 +15,7 @@ function AdminBlogList(){
   if(user === null)
   {
     navigate("/");
-    return ;
+    return (<div></div>);
   }
 
   const [posts, setPosts] = useState([]);
