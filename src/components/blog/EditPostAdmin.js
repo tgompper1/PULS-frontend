@@ -59,6 +59,8 @@ function EditPostAdmin(props) {
     });
   });
 
+  // remove spotlight post
+
   const deleteSpotlight = () => {
     axios
     .delete(URL+`api/settings/spotlight`)
@@ -70,6 +72,7 @@ function EditPostAdmin(props) {
     });
   }
 
+  // set spotlight button
   const addRemoveSpotlight =
     JSON.parse(localStorage.getItem("spotlightPostID")) === String(id)
     ? <Link  to= '/blog-admin' onClick={deleteSpotlight} className="button">
@@ -98,11 +101,11 @@ function EditPostAdmin(props) {
   };
 
 
-  // star post
+  // spotlight a post post
   const onStarClick = () => {
     deleteSpotlight();
 
-    // add star post
+    // add spotlight post
     axios
     .post(URL+`api/settings/spotlight/`, {id})
     .then((res) => {
