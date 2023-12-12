@@ -13,7 +13,7 @@ const PostCard = (props) => {
   if(user === null)
   {
     
-    props.navigate("/")
+    props.navigate("/");
   }
 
 
