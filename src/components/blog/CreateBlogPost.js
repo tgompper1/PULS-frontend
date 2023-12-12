@@ -18,7 +18,6 @@ const CreateBlogPost = (props) => {
   if(user === null)
   {
     navigate("/");
-    return (<div></div>);
   }else{
   
 
