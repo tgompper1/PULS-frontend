@@ -29,14 +29,8 @@ const CreateBlogPost = (props) => {
     return <Navigate to="/"/>;
   }
   
-
-
-
-  // Define the state with useState hook
-  
-  
-
   const URL = "https://pulse.adaptable.app/"
+
   const onSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -73,13 +67,12 @@ const CreateBlogPost = (props) => {
           body: '',
           photo: '',
         });
+        navigate('/blog-admin');
       })
       .catch((err) => {
         console.log('Error in CreateBlogPost');
       });
-
-    navigate('/blog-admin');}
-  };
+  }};
 
   return (
     <div>

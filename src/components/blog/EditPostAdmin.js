@@ -49,12 +49,11 @@ function EditPostAdmin(props) {
       .put(URL+`api/posts/${id}`, data)
       .then((res) => {
         console.log('Updated post successfully');
+        navigate('/blog-admin');
       })
       .catch((err) => {
         console.log('Error in EditPostAdmin');
       });
-    
-      navigate('/blog-admin');
   };
 
   // get spotlight post id
