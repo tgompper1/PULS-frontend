@@ -12,7 +12,8 @@ const CreateBlogPost = (props) => {
   const [post, setPost] = useState({
     title: '',
     body: '',
-    photo: ''
+    photo: '',
+    summary: ''
   });
 
   const URL = "https://pulse.adaptable.app/"
