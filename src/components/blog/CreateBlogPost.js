@@ -19,10 +19,15 @@ const CreateBlogPost = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-
-    if(post.title.length >100)
+    if(post.title === "")
+    {
+      alert("Must fill out Title field");
+    }else if(post.title.length >100)
     {
       alert("Title can be max 100 characters");
+    }else if(post.summary === "")
+    {
+      alert("Must fill out Summary field");
     }else if(post.summary.length > 200)
     {
       alert("Summary can be max 200 characters");
