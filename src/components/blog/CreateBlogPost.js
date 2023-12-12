@@ -35,6 +35,9 @@ const CreateBlogPost = (props) => {
     }else if(post.photo === "")
     {
       alert("Image is required")
+    }else if (post.body === "")
+    {
+      alert("Must fill out Body field");
     }else{
     formData.append('title', post.title);
     formData.append('summary', post.summary);
