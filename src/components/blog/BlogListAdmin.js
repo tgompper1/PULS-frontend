@@ -15,7 +15,6 @@ function AdminBlogList(){
   if(user === null)
   {
     navigate("/");
-    return (<div></div>);
   }else{
 
   const [posts, setPosts] = useState([]);
@@ -39,7 +38,7 @@ function AdminBlogList(){
       ? ''
       : posts.map((post, k) => <PostCardAdmin post={post} key={k} />);
 
-  
+}
   return (
     <div>
       <h1>Blog</h1>
@@ -50,7 +49,7 @@ function AdminBlogList(){
 
       {blogList}
     </div>
-  );}
+  );
 }
 
 export default AdminBlogList;

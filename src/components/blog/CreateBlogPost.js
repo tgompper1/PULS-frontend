@@ -76,7 +76,7 @@ const CreateBlogPost = (props) => {
       });
 
     navigate('/blog-admin');}
-  };
+  };}
 
   return (
     <div>
@@ -145,7 +145,7 @@ const CreateBlogPost = (props) => {
         <input type='submit' onSubmit={onSubmit} className="button" value="Create Post"/>
       </form>
     </div>
-  );}
+  );
 };
 
 export default CreateBlogPost;
