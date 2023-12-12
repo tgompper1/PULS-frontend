@@ -16,7 +16,7 @@ const CreateBlogPost = (props) => {
   //if not they get redirected to the home page
   if(user === null)
   {
-    navigate('/');
+    navigate("/");
   }
   
 
