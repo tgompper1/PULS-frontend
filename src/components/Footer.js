@@ -8,15 +8,10 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 export default function Footer() {
     const[buttonPopup, setButtonPopup] = useState(false);
-    const { user } = useAuthContext();
-    const { logout } = useLogout();
 
-    const handleClick = () => {
-        if(user != null)
-        {
-        logout()
-        }
-      };
+    //the user value allows us to check if we're logged in
+    const { user } = useAuthContext();
+    
 
     return (
         <div className="col-12 col-s-12 footer">

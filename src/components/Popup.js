@@ -37,10 +37,10 @@ export default function Popup(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
+      //this does the post to login and checks if the input is a valid user
       
       const { data } = await axios.post(
-        "https://pulse.adaptable.app/login",//"http://localhost:8001/login",
+        "https://pulse.adaptable.app/login",
         {
           ...inputValue,
         },

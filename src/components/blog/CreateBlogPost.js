@@ -5,10 +5,24 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 import { useNavigate } from 'react-router-dom';
+import { useAuthContext } from "../../hooks/useAuthContext";
+
 
 const CreateBlogPost = (props) => {
-  // Define the state with useState hook
+  const { user } = useAuthContext();
   const navigate = useNavigate();
+  //if the user writes an admin url this will check if they're logged in
+  //if not they get redirected to the home page
+  if(user == null)
+  {
+    navigate("/");
+  }
+
+
+
+
+  // Define the state with useState hook
+  
   const [post, setPost] = useState({
     title: '',
     body: '',

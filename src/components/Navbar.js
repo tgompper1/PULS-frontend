@@ -16,6 +16,8 @@ export default function Navbar() {
     const { user } = useAuthContext();
     const { logout } = useLogout();
     const navigate = useNavigate();
+
+    //when logged out we navigate the user to the home page
     const handleLogout = () => {
         if(user != null)
         {
@@ -46,6 +48,8 @@ export default function Navbar() {
 
     const getNavLinks = () =>
     {
+        //this changes the display of the nav bar based on if you're logged in or not
+
         if(user != null)
         {
             return [

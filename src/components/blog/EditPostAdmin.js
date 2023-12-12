@@ -3,14 +3,28 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ReactQuill from 'react-quill';
 
+
+import { useAuthContext } from "../../hooks/useAuthContext";
+
 function EditPostAdmin(props) {
+  const { user } = useAuthContext();
+  const navigate = useNavigate();
+  //if the user writes an admin url this will check if they're logged in
+  //if not they get redirected to the home page
+  if(user == null)
+  {
+    navigate("/");
+  }
+
+
+
   const [title, setTitle] = useState({title:''});
   const [summary, setSummary] = useState({summary:''});
   const [body, setBody] = useState({body:''});
 
 
   const { id } = useParams();
-  const navigate = useNavigate();
+  
   const URL = "https://pulse.adaptable.app/"
   // get the post by id
   useEffect( () => {

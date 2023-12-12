@@ -1,8 +1,21 @@
 import React from 'react';
 import {Link, useParams} from 'react-router-dom';
 import '../../styles/blog.css';
+import { useAuthContext } from "../../hooks/useAuthContext";
+import { useNavigate } from "react-router-dom";
+
 
 const PostCard = (props) => {
+  const { user } = useAuthContext();
+  const navigate = useNavigate();
+  //if the user writes an admin url this will check if they're logged in
+  //if not they get redirected to the home page
+  if(user == null)
+  {
+    navigate("/");
+  }
+
+
   const post = props.post;
   const date = new Date(post.createdAt)
   const path = "https://pulse.adaptable.app/images/" + post.photo

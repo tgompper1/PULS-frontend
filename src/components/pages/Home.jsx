@@ -1,3 +1,6 @@
+//these pages under the pages folder are not being used, they're here in case
+//we want to change the login or want to create a signup page
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";

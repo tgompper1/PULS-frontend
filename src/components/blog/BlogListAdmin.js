@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 function AdminBlogList(){
   const { user } = useAuthContext();
   const navigate = useNavigate();
+  //if the user writes an admin url this will check if they're logged in
+  //if not they get redirected to the home page
   if(user == null)
   {
     navigate("/");
