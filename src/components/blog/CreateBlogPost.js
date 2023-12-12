@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { useHistory } from 'react-router-dom';
+
 
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext";
@@ -12,6 +14,8 @@ const CreateBlogPost = (props) => {
   
   const navigate = useNavigate();
   const { user } = useAuthContext();
+  const history = useHistory();
+  history.push("/");
   //if the user writes an admin url this will check if they're logged in
   //if not they get redirected to the home page
   const [post, setPost] = useState({
