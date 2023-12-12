@@ -26,7 +26,7 @@ const CreateBlogPost = (props) => {
 
   if(user === null)
   {
-    navigate('/blog');
+    navigate('https://puls.netlify.app/');
   }
   
 
