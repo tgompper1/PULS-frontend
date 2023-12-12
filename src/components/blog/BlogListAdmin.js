@@ -16,7 +16,7 @@ function AdminBlogList(){
   if(user === null)
   {
     navigate("/");
-  }else{
+  }
 
   
 
@@ -39,7 +39,7 @@ function AdminBlogList(){
       ? ''
       : posts.map((post, k) => <PostCardAdmin post={post} key={k} />);
 
-}
+
   return (
     <div>
       <h1>Blog</h1>

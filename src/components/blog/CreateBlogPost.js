@@ -24,7 +24,7 @@ const CreateBlogPost = (props) => {
   if(user === null)
   {
     navigate("/");
-  }else{
+  }
   
 
 
@@ -76,7 +76,7 @@ const CreateBlogPost = (props) => {
       });
 
     navigate('/blog-admin');}
-  };}
+  };
 
   return (
     <div>
